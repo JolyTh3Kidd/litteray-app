@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "233827910993",
+    "project_id": "litteray-743e8",
+    "storage_bucket": "litteray-743e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233827910993:android:7fd1e692ef65dd3aa9ff70",
+        "android_client_info": {
+          "package_name": "com.example.litteray"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "233827910993-s42ao6n7lncq1lroef1kos8t9c0ra74l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmz1Ecl_zPNiF8WRJ2UCC7OwO_AGJbnt4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "233827910993-s42ao6n7lncq1lroef1kos8t9c0ra74l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

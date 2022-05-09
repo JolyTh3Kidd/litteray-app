@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/aboutUs"
+        android:name="com.example.litteray.activities.AboutUsFragment"
+        android:label="About Us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/linkMenu"
+        android:name="com.example.litteray.activities.LinkMenuFragment"
+        android:label="Link"
+        tools:layout="@layout/fragment_link_menu" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.litteray.activities.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+</navigation>

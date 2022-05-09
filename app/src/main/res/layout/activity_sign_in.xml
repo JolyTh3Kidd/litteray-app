@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:clipToPadding="false"
+    android:contentDescription="@string/app_name"
+    android:overScrollMode="never"
+    android:padding="@dimen/_24sdp"
+    android:scrollbars="none"
+    tools:context=".activities.SignInActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:src="@drawable/litteray_logo" />
+
+        <EditText
+            android:id="@+id/loginInput"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/_56sdp"
+            android:background="@drawable/background_message1"
+            android:fontFamily="@font/rubik"
+            android:hint="@string/login"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:textColorHint="@color/gray"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_13sdp"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/_26sdp"
+            android:background="@drawable/background_message1"
+            android:fontFamily="@font/rubik"
+            android:hint="@string/password"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:textColorHint="@color/gray"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_13sdp"
+            tools:ignore="TextContrastCheck" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signInButton"
+            android:layout_width="@dimen/_142sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/sign_in"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/message2"
+            app:cornerRadius="@dimen/_8sdp"/>
+
+        <TextView
+            android:id="@+id/createAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_account"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:textColor="@color/gray"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</ScrollView>
