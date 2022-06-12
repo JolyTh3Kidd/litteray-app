@@ -61,4 +61,5 @@
     <string name="didn_t_receive_the_code">Didn\'t receive the code?</string>
     <string name="resend_code">Resend Code</string>
     <string name="send_code">Send Code</string>
+    <string name="search">Search</string>
 </resources>

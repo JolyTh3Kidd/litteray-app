@@ -8,24 +8,19 @@
     android:animateLayoutChanges="false"
     tools:context=".activities.SettingsActivity">
 
-    <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/profileImage"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/faqImg"
         android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginStart="@dimen/_16sdp"
-        android:layout_marginLeft="@dimen/_16sdp"
-        android:layout_marginTop="@dimen/_12sdp"
-        android:background="@drawable/background_message1"
-        android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:riv_corner_radius="@dimen/_8sdp"/>
-
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/ic_faq"
+        app:layout_constraintBottom_toTopOf="@id/linkImg"
+        app:layout_constraintEnd_toStartOf="@id/linkMenu"/>
     <Button
         android:id="@+id/aboutUs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/message2"
         android:layout_marginBottom="@dimen/_80sdp"
         android:text="@string/faq"
         android:textColor="@color/white"
@@ -34,25 +29,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/linkImg"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/link"
+        app:layout_constraintTop_toBottomOf="@id/aboutUs"
+        app:layout_constraintEnd_toStartOf="@id/linkMenu"/>
     <Button
         android:id="@+id/linkMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/message2"
         android:text="@string/linkMenu"
         android:textColor="@color/white"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/aboutUs" />
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/quitImg"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginBottom="@dimen/_45sdp"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/ic_exit"
+        app:layout_constraintBottom_toTopOf="@id/toolbar"
+        app:layout_constraintEnd_toStartOf="@id/logOut"/>
     <Button
         android:id="@+id/logOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/message2"
         android:text="@string/log_out"
         android:textColor="@color/white"
         android:layout_marginBottom="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_15sdp"
         app:layout_constraintBottom_toTopOf="@id/toolbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/mainFragment"
-        android:icon="@drawable/aboutus"
-        android:title="@string/app_name" />
-
-    <item
-        android:id="@+id/aboutUs"
-        android:icon="@drawable/aboutus"
-        android:title="@string/about_us" />
-
-    <item
-        android:id="@+id/linkMenu"
-        android:icon="@drawable/link"
-        android:title="@string/linkMenu" />
+        android:id="@+id/actionSearch"
+        android:icon="@drawable/ic_find"
+        android:title="@string/search"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"/>
 </menu>

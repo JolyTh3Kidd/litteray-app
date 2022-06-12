@@ -35,7 +35,6 @@
         android:layout_marginEnd="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_16sdp"
         android:padding="@dimen/_5sdp"
-        android:src="@drawable/ic_info"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -133,27 +132,6 @@
         app:layout_constraintTop_toTopOf="@id/viewBackground"/>
 
     <FrameLayout
-        android:id="@+id/attachDoc"
-        android:layout_width="@dimen/_36sdp"
-        android:layout_height="@dimen/_36sdp"
-        android:layout_marginBottom="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_8sdp"
-        android:background="@drawable/background_message1"
-        app:layout_constraintEnd_toStartOf="@id/sendMessage"
-        app:layout_constraintBottom_toBottomOf="parent">
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="@dimen/_4sdp"
-            android:layout_marginLeft="@dimen/_4sdp"
-            android:layout_marginRight="@dimen/_4sdp"
-            android:layout_marginEnd="@dimen/_4sdp"
-            android:padding="@dimen/_8sdp"
-            android:src="@drawable/ic_paper_clip"
-            android:tint="@color/white"/>
-    </FrameLayout>
-
-    <FrameLayout
         android:id="@+id/sendMessage"
         android:layout_width="@dimen/_36sdp"
         android:layout_height="@dimen/_36sdp"
@@ -165,6 +143,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/sendMessageImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="@dimen/_4sdp"
@@ -194,7 +173,7 @@
         android:textColorHint="@color/gray2"
         android:textSize="@dimen/_10sdp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/attachDoc"
+        app:layout_constraintEnd_toStartOf="@id/sendMessage"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,29 +9,16 @@
     tools:context=".activities.UserPageActivity">
 
     <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/addPost"
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_16sdp"
-        android:layout_marginRight="@dimen/_16sdp"
-        android:layout_marginTop="@dimen/_12sdp"
-        android:background="@drawable/ic_add_gray"
+        android:id="@+id/changeProfileImage"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:background="@drawable/background_message1"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:riv_corner_radius="@dimen/_12sdp"/>
-
-        <com.makeramen.roundedimageview.RoundedImageView
-            android:id="@+id/profileImage"
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_100sdp"
-            android:layout_marginTop="@dimen/_32sdp"
-            android:background="@drawable/background_message1"
-            android:scaleType="centerCrop"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:riv_corner_radius="@dimen/_28sdp"/>
+        app:riv_corner_radius="@dimen/_28sdp"/>
 
         <TextView
             android:id="@+id/usersName"
@@ -41,7 +28,7 @@
             android:fontFamily="@font/rubik"
             android:textStyle="bold"
             android:textColor="@color/white"
-            app:layout_constraintTop_toBottomOf="@id/profileImage"
+            app:layout_constraintTop_toBottomOf="@id/changeProfileImage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="@dimen/_10sdp"/>
@@ -70,6 +57,100 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="@dimen/_10sdp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileType"
+        app:layout_constraintBottom_toTopOf="@id/toolbar">
+
+        <EditText
+            android:id="@+id/loginInput"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:background="@drawable/background_message1"
+            android:fontFamily="@font/rubik"
+            android:hint="@string/change_login"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:textColorHint="@color/gray"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_13sdp"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/usernameInput"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/background_message1"
+            android:fontFamily="@font/rubik"
+            android:hint="@string/change_username"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:textColorHint="@color/gray"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_13sdp"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/background_message1"
+            android:fontFamily="@font/rubik"
+            android:hint="@string/change_e_mail"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:textColorHint="@color/gray"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_13sdp"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/background_message1"
+            android:fontFamily="@font/rubik"
+            android:hint="@string/change_password"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:textColorHint="@color/gray"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_13sdp"
+            tools:ignore="TextContrastCheck" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/submitButton"
+            android:layout_width="@dimen/_142sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/message2"
+            app:cornerRadius="@dimen/_8sdp"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/toolbar"

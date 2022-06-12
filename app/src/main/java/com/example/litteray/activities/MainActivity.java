@@ -40,9 +40,11 @@ public class MainActivity extends BaseActivity implements ConversationListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         pref = new Manager(getApplicationContext());
+
         init();
         userInfo();
         getToken();
@@ -69,9 +71,6 @@ public class MainActivity extends BaseActivity implements ConversationListener {
         binding.addNewChat.setOnClickListener(v -> {
             startActivity(new Intent(getApplicationContext(), UsersActivity.class));
         });
-        binding.profileImage.setOnClickListener(v -> {
-            startActivity(new Intent(getApplicationContext(), UserInfoActivity.class));
-        });
         binding.settingMenu.setOnClickListener(v -> {
             startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
             overridePendingTransition(0, 0);
@@ -85,7 +84,6 @@ public class MainActivity extends BaseActivity implements ConversationListener {
     private void userInfo() {
         byte[] bytes = Base64.decode(pref.getString(Constants.KEY_IMAGE), Base64.DEFAULT);
         Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-        binding.profileImage.setImageBitmap(bitmap);
     }
 
     private void showToast(String message) {

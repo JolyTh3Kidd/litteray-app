@@ -2,8 +2,14 @@ package com.example.litteray.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
+import androidx.appcompat.widget.SearchView;
+
+import com.example.litteray.R;
 import com.example.litteray.adapters.UsersAdapters;
 import com.example.litteray.databinding.ActivityUsersBinding;
 import com.example.litteray.listeners.UserListener;

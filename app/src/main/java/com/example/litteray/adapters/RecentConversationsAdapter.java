@@ -5,6 +5,8 @@ import android.graphics.BitmapFactory;
 import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,14 +16,19 @@ import com.example.litteray.listeners.ConversationListener;
 import com.example.litteray.models.ChatMessage;
 import com.example.litteray.models.User;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Locale;
 
-public class RecentConversationsAdapter extends RecyclerView.Adapter<RecentConversationsAdapter.conversationViewHolder> {
+public class RecentConversationsAdapter extends RecyclerView.Adapter<RecentConversationsAdapter.conversationViewHolder> implements Filterable {
     private final List<ChatMessage> chatMessages;
     private final ConversationListener conversationListener;
+    List<ChatMessage> chatListAll;
 
     public RecentConversationsAdapter(List<ChatMessage> chatMessages, ConversationListener conversationListener) {
         this.chatMessages = chatMessages;
+        this.chatListAll = new ArrayList<>(chatMessages);
         this.conversationListener = conversationListener;
     }
 
@@ -46,6 +53,38 @@ public class RecentConversationsAdapter extends RecyclerView.Adapter<RecentConve
     public int getItemCount() {
         return chatMessages.size();
     }
+
+    @Override
+    public Filter getFilter() {
+        return filter;
+    }
+    Filter filter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence charSequence) {
+            List<ChatMessage> filterList = new ArrayList<>();
+            if (charSequence.toString().isEmpty()) {
+                filterList.addAll(chatListAll);
+            } else {
+                for (ChatMessage chat: chatListAll) {
+                    if (chat.toString().toLowerCase(Locale.ROOT).contains(charSequence.toString().toLowerCase(Locale.ROOT))) {
+                        filterList.add(chat);
+                    }
+                }
+            }
+
+            FilterResults filterResults = new FilterResults();
+            filterResults.values = filterList;
+
+            return filterResults;
+        }
+
+        @Override
+        protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+            chatMessages.clear();
+            chatMessages.addAll((Collection<? extends ChatMessage>) filterResults.values);
+            notifyDataSetChanged();
+        }
+    };
 
     class conversationViewHolder extends RecyclerView.ViewHolder {
         RecentUserContainBinding binding;

@@ -56,15 +56,11 @@ public class SettingsActivity extends BaseActivity {
             startActivity(new Intent(getApplicationContext(), UserPageActivity.class));
             overridePendingTransition(0, 0);
         });
-        binding.profileImage.setOnClickListener(v -> {
-            startActivity(new Intent(getApplicationContext(), UserInfoActivity.class));
-        });
     }
 
     private void userInfo() {
         byte[] bytes = Base64.decode(pref.getString(Constants.KEY_IMAGE), Base64.DEFAULT);
         Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-        binding.profileImage.setImageBitmap(bitmap);
     }
 
     private void showToast(String message) {

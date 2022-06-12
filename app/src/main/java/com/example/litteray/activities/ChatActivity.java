@@ -16,6 +16,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 
+import com.example.litteray.R;
 import com.example.litteray.adapters.ChatAdapters;
 import com.example.litteray.databinding.ActivityChatBinding;
 import com.example.litteray.databinding.ActivityUserPageBinding;
@@ -297,11 +298,6 @@ public class ChatActivity extends BaseActivity {
     private void setListeners() {
         binding.goBack.setOnClickListener(v -> onBackPressed());
         binding.sendMessage.setOnClickListener(v -> sendMessage());
-        binding.attachDoc.setOnClickListener(v -> {
-            Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            chooseImage.launch(intent);
-        });
         binding.profilePic.setOnClickListener(v ->
                 startActivity(new Intent(getApplicationContext(), OtherUsersPageActivity.class)));
     }
